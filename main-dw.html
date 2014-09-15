@@ -1,19 +1,87 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Pyroclastic Flow</title>
-<link href="css/main.css" rel="stylesheet" type="text/css">
-</head>
-
-<body>
-<canvas id="myCanvas" width=window.innerWidth; height = window.innerHeight;></canvas> 
-<div id="name">PYROCLASTIC FLOW</div>
-<script type="text/javascript" src="js/main.js"></script>
-
-<script> 
-	//pulse(0,255);
-	//jitter();
-</script>
-</body>
+    <style>
+      body {
+	margin: 0px;
+	padding: 0px;
+	background-color: #000000;
+      }
+	  canvas{
+		  position: absolute;
+		  pointer-events:none;
+	  }
+    #email {
+	background-color: #FFFFFF;
+}
+    </style>
+	</head>
+    <body>
+		<canvas id="l0"></canvas>
+        <canvas id="l1"></canvas>
+        <canvas id="l2"></canvas>
+        <canvas id="l3"></canvas>
+        <canvas id="l4"></canvas>
+        <canvas id="l5"></canvas>
+        <canvas id="l6"></canvas>
+        <canvas id="l7"></canvas>
+        <canvas id="l8"></canvas>
+        <canvas id="l9"></canvas>
+        <canvas id="l10"></canvas>
+        <canvas id="l11"></canvas>
+        <canvas id="l12"></canvas>
+        <input type="email" name="email" id="email">
+        <script>
+        	window.onload = function(){
+				loadImage('l0', 'pngs/0_RedCircle_large.png');
+				loadImage('l1', 'pngs/1_RainbowCircle_large.png');
+				loadImage('l2', 'pngs/2_BlackCircle_large.png');
+				loadImage('l3', 'pngs/3_TealCircle_large.png');
+				loadImage('l4', 'pngs/4_RedCircle_large.png');
+				loadImage('l5', 'pngs/5_PurpleGround_large.png');
+				loadImage('l6', 'pngs/6_PatternGround_large.png');
+				loadImage('l7', 'pngs/7_BlackShroom_large.png');
+				loadImage('l8', 'pngs/8_RainbowShroom_large.png');
+				loadImage('l9', 'pngs/9_CMountain_large.png');
+				loadImage('l10', 'pngs/10_LMountain_large.png');
+				loadImage('l11', 'pngs/11_RMountain_large.png');
+				loadImage('l12', 'pngs/12_RainbowMountains_large.png');
+			}
+			function loadImage(canvasName, src){
+				var c = document.getElementById(canvasName);
+				c.style.left = 0;
+				c.style.top = 0;
+				c.width = window.innerWidth;
+				c.height = window.innerHeight;
+				c.style.opacity = 0;
+				var ctx = c.getContext("2d");
+				var img = new Image();
+				img.src = src;
+				img.onload = function() {
+					ctx.drawImage(img, 0, 0);
+				}
+				fadeIn(c,0);
+			}
+			window.onkeydown = function() {
+				var canvasName = Math.floor(Math.random() * 13);
+				canvasName = 'l' + canvasName
+				var c = document.getElementById(canvasName);
+				if (Math.random() > .5){fadeIn(c,0);}
+				else {fadeOut(c,1);}
+			}
+			function fadeIn(canvas,opacity){
+				if (opacity > 1.1){return 1}
+				opacity += .05;
+				canvas.style.opacity = opacity;
+				setTimeout(function() {fadeIn(canvas,opacity);}, 16);
+			}
+			function fadeOut(canvas,opacity){
+				if (opacity < -.1){return 1}
+				opacity -= .05;
+				canvas.style.opacity = opacity;
+				setTimeout(function() {fadeOut(canvas,opacity);}, 16);
+			}
+			
+        </script>
+	</body>
 </html>
