@@ -23,7 +23,7 @@
 			layers: {
 				
 				// Navigation Panel.
-					navPanel: {
+					/*navPanel: {
 						animation: 'pushX',
 						breakpoints: 'narrower',
 						clickToClose: true,
@@ -44,7 +44,7 @@
 						position: 'top-left',
 						side: 'top',
 						width: '6em'
-					}
+					}*/
 
 			}
 		}
