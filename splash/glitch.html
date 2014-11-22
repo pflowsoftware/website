@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <!--
+Copyright (c) 2014 by Chuck Neely (http://codepen.io/chuckneely/pen/ronfx)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+-->
+
+  <title>CSS Glitched Text - CodePen</title>
+
+  <link rel="stylesheet" href="/assets/reset/normalize.css">
+
+  <style>body {
+  background: black;
+  font-family: 'Varela', sans-serif;
+}
+
+.glitch {
+  color: white;
+  font-size: 0px;
+  position: relative;
+  width: 268px;
+  height: 654px;
+  margin: 0 auto;
+  text-indent: -999em;
+  background: transparent url(logo.png) center center no-repeat;
+}
+
+@-webkit-keyframes noise-anim {
+  0% {
+    clip: rect(48px, 9999px, 75px, 0);
+  }
+  5% {
+    clip: rect(373px, 9999px, 644px, 0);
+  }
+  10% {
+    clip: rect(185px, 9999px, 255px, 0);
+  }
+  15.0% {
+    clip: rect(506px, 9999px, 400px, 0);
+  }
+  20% {
+    clip: rect(226px, 9999px, 525px, 0);
+  }
+  25% {
+    clip: rect(517px, 9999px, 560px, 0);
+  }
+  30.0% {
+    clip: rect(262px, 9999px, 193px, 0);
+  }
+  35% {
+    clip: rect(440px, 9999px, 357px, 0);
+  }
+  40% {
+    clip: rect(626px, 9999px, 274px, 0);
+  }
+  45% {
+    clip: rect(69px, 9999px, 486px, 0);
+  }
+  50% {
+    clip: rect(606px, 9999px, 524px, 0);
+  }
+  55.0% {
+    clip: rect(212px, 9999px, 14px, 0);
+  }
+  60.0% {
+    clip: rect(487px, 9999px, 540px, 0);
+  }
+  65% {
+    clip: rect(564px, 9999px, 11px, 0);
+  }
+  70% {
+    clip: rect(38px, 9999px, 183px, 0);
+  }
+  75% {
+    clip: rect(333px, 9999px, 128px, 0);
+  }
+  80% {
+    clip: rect(374px, 9999px, 358px, 0);
+  }
+  85.0% {
+    clip: rect(355px, 9999px, 389px, 0);
+  }
+  90% {
+    clip: rect(22px, 9999px, 139px, 0);
+  }
+  95% {
+    clip: rect(509px, 9999px, 371px, 0);
+  }
+  100% {
+    clip: rect(640px, 9999px, 454px, 0);
+  }
+}
+.glitch:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 2px;
+  top: 0;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  -webkit-animation: noise-anim 2s infinite linear alternate-reverse;
+  background: inherit;
+  -webkit-filter: hue-rotate(90deg);
+  filter: hue-rotate(90deg);
+}
+
+@-webkit-keyframes noise-anim-2 {
+  0% {
+    clip: rect(35px, 9999px, 66px, 0);
+  }
+  5% {
+    clip: rect(85px, 9999px, 19px, 0);
+  }
+  10% {
+    clip: rect(67px, 9999px, 16px, 0);
+  }
+  15.0% {
+    clip: rect(40px, 9999px, 57px, 0);
+  }
+  20% {
+    clip: rect(21px, 9999px, 39px, 0);
+  }
+  25% {
+    clip: rect(10px, 9999px, 6px, 0);
+  }
+  30.0% {
+    clip: rect(40px, 9999px, 11px, 0);
+  }
+  35% {
+    clip: rect(98px, 9999px, 4px, 0);
+  }
+  40% {
+    clip: rect(14px, 9999px, 9px, 0);
+  }
+  45% {
+    clip: rect(63px, 9999px, 86px, 0);
+  }
+  50% {
+    clip: rect(32px, 9999px, 13px, 0);
+  }
+  55.0% {
+    clip: rect(62px, 9999px, 59px, 0);
+  }
+  60.0% {
+    clip: rect(22px, 9999px, 67px, 0);
+  }
+  65% {
+    clip: rect(61px, 9999px, 28px, 0);
+  }
+  70% {
+    clip: rect(54px, 9999px, 70px, 0);
+  }
+  75% {
+    clip: rect(34px, 9999px, 37px, 0);
+  }
+  80% {
+    clip: rect(43px, 9999px, 67px, 0);
+  }
+  85.0% {
+    clip: rect(8px, 9999px, 3px, 0);
+  }
+  90% {
+    clip: rect(12px, 9999px, 56px, 0);
+  }
+  95% {
+    clip: rect(19px, 9999px, 98px, 0);
+  }
+  100% {
+    clip: rect(66px, 9999px, 51px, 0);
+  }
+}
+.glitch:before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: -2px;
+  top: 0;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  -webkit-animation: noise-anim-2 3s infinite linear alternate-reverse;
+  background: inherit;
+  -webkit-filter: hue-rotate(300deg);
+  filter: hue-rotate(300deg);
+}</style>
+
+  <script>
+    window.open    = function(){};
+    window.print   = function(){};
+    // Support hover state for mobile.
+    if (false) {
+      window.ontouchstart = function(){};
+    }
+  </script>
+
+    <script src="/assets/libs/prefixfree.min.js"></script>
+
+</head>
+
+<body>
+
+  <link href='http://fonts.googleapis.com/css?family=Varela' rel='stylesheet' type='text/css'>
+
+<div class="glitch"></div> 
+
+<!-- Modified to use a background image of the "glitch" from Wreck It Ralph, with CSS filters changing the hue -->
+
+  <script src='http://assets.codepen.io/assets/libs/fullpage/jquery-ab8e840c3dad7ccf2deadb8c40d53bdb.js'></script>
+
+  <script src='/assets/common/localstorage.js'></script>
+  <script src='/assets/post/scroll/remember_scroll.js'></script>
+  <script>RememberScroll.init();</script>
+
+  <script>
+    if (document.location.search.match(/type=embed/gi)) {
+      window.parent.postMessage('resize', "*");
+    }
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+@charset "UTF-8";
+/* CSS Document */
+body {
+	background:black;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+.top:hover {
+	super.background:black;
+	-webkit-filter:opacity(0%);
+}
+.top:
+.banner {
+	-webkit-filter:grayscale(100%);
+}
+
